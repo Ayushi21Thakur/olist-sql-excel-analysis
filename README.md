@@ -1,6 +1,6 @@
 # Olist E-Commerce: Sales & Customer Analysis (SQL + Excel)
 
-An end-to-end analysis of ~100K orders from the Brazilian marketplace Olist. I used **MySQL** to answer business questions, **Excel Power Query** to clean and shape the results, and **PivotTables, charts and formulas** to build a one-page dashboard.
+An end-to-end analysis of ~100K orders from the Brazilian marketplace Olist. I used **MySQL** to answer business questions, **Excel Power Query** to clean and shape the results, and **PivotTables, charts, and formulas** to build a one-page dashboard.
 
 ![Dashboard](images/dashboard.png)
 
@@ -38,15 +38,15 @@ Delivery time and review score move together, but this analysis does not prove l
 1. Loaded the 7 relevant Olist tables into MySQL and checked every row count against the source files.
 2. Wrote one SQL query per business question and exported each result to CSV (`exports/`).
 3. Loaded the CSVs into Excel with Power Query and cleaned them.
-4. Built charts, a cohort retention heatmap and KPI cards on one dashboard.
+4. Built charts, a cohort retention heatmap, and KPI cards on one dashboard.
 
 ## Data decisions
 
 - **Only `delivered` orders** are counted, so canceled and unfinished orders do not inflate revenue.
 - **Revenue = sum of item `price`**; freight is excluded.
 - **Customers are counted with `customer_unique_id`**, not `customer_id`, because `customer_id` is created per order.
-- **Monthly charts cover Jan 2017 to Aug 2018.** Sep, Oct and Dec 2016 were removed because they have 1, 265 and 1 orders. This is why the monthly total (R$13.18M) is slightly lower than the full total (R$13.22M).
-- Month-over-month growth is recalculated in Excel, because the SQL value for Jan 2017 was compared with a nearly empty Dec 2016.
+- **Monthly charts cover Jan 2017 to Aug 2018.** Sep, Oct, and Dec 2016 were removed because they have 1, 265, and 1 order. This is why the monthly total (R$13.18M) is slightly lower than the full total (R$13.22M).
+- Month-over-month growth is recalculated in Excel because the SQL value for Jan 2017 was compared with a nearly empty Dec 2016.
 - 99,223 of 99,224 reviews loaded (one row was dropped by the import parser). The effect on results is negligible.
 - 8 delivered orders have no delivery date and are excluded from delivery-time results.
 - Cohort retention is shown only for cohorts with a full 6 months of follow-up (Jan 2017 to Feb 2018).
@@ -85,4 +85,4 @@ olist-sql-excel-analysis/
 
 Olist public dataset (Kaggle). Currency: Brazilian Reais (R$).
 
-**Author:** Ayushi Thakur | www.linkedin.com/in/ayushi-thakur2165
+**Author:** AYUSHI THAKUR | www.linkedin.com/in/ayushi-thakur2165
