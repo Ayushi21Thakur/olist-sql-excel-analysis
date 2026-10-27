@@ -85,4 +85,4 @@ olist-sql-excel-analysis/
 
 Olist public dataset (Kaggle). Currency: Brazilian Reais (R$).
 
-**Author:** [Your name] | [LinkedIn link]
+**Author:** Ayushi Thakur | www.linkedin.com/in/ayushi-thakur2165
